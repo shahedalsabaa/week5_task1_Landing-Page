@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1: Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="task1_W5.css">
+    <style>
+        /* ============================================
+           TASK INSTRUCTIONS - DO NOT MODIFY THIS BLOCK
+           ============================================ */
+        .uni-header { display: flex; align-items: center; gap: 10px; padding: 15px 30px; border-bottom: 1px solid rgba(255,255,255,0.06); background: #0f0f1a; font-family: 'Inter', sans-serif; }
+        .uni-header img { width: 35px; height: 35px; border-radius: 8px; object-fit: contain; background: #fff; padding: 2px; }
+        .uni-header span { color: #888; font-size: 0.85rem; font-weight: 600; }
+        .instructions { font-family: 'Inter', sans-serif; background: #0f0f1a; color: #e0e0e0; padding: 30px; border-bottom: 2px dashed rgba(76,175,80,0.3); }
+        .instructions h1 { color: #af4c9d; margin-bottom: 5px; font-size: 1.8rem; }
+        .instructions .desc { color: #888; margin-bottom: 25px; }
+        .task { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 20px; margin-bottom: 15px; }
+        .task h3 { color: #fff; margin-bottom: 8px; }
+        .task-num { color: #af4c9d; font-weight: 700; }
+        .hint { background: rgba(76,175,80,0.08); border: 1px solid rgba(76,175,80,0.2); border-radius: 8px; padding: 12px; margin-top: 8px; font-size: 0.9rem; }
+        .hint strong { color: #e96ad2; }
+        .instructions code { background: rgba(255,255,255,0.08); padding: 2px 8px; border-radius: 4px; color: #af4c9d; font-family: monospace; direction: ltr; display: inline-block; }
+    </style>
+</head>
+<body>
+
+
+    <!-- =============================================
+         LANDING PAGE HTML - Style in landing.css
+         ============================================= -->
+
+    <!-- TODO 1: Navbar -->
+    <nav class="navbar">
+        <div class="logo">TechLaunch</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- TODO 2: Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Build Something Amazing</h1>
+            <p class="hero-subtitle">The modern platform for web developers. Ship faster, scale better, and delight your users.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">Get Started</a>
+                <a href="#" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TODO 3: Features Section -->
+    <section class="features" id="features">
+        <h2 class="section-heading">Why Choose Us</h2>
+        <p class="section-subheading">Everything you need to build modern websites</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">&#9889;</div>
+                <h3>Lightning Fast</h3>
+                <p>Optimized performance that loads in milliseconds. Your users will love the speed.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#128274;</div>
+                <h3>Secure by Default</h3>
+                <p>Enterprise-grade security built into every layer. Sleep well at night.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#128640;</div>
+                <h3>Easy to Deploy</h3>
+                <p>One-click deployment to any cloud provider. No DevOps experience needed.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TODO 4: Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <h2 class="section-heading">What People Say</h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"This platform changed how we build products. Our development time was cut in half."</p>
+                <div class="testimonial-author">
+                    <img src="https://i.pravatar.cc/50?img=1" alt="Avatar" class="author-avatar">
+                    <div>
+                        <strong>Sarah Johnson</strong>
+                        <span>CTO, TechCorp</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"The best developer experience I've ever had. Clean, intuitive, and powerful."</p>
+                <div class="testimonial-author">
+                    <img src="https://i.pravatar.cc/50?img=3" alt="Avatar" class="author-avatar">
+                    <div>
+                        <strong>Ahmed Hassan</strong>
+                        <span>Lead Developer, StartupXYZ</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"We migrated our entire infrastructure in a weekend. Incredible documentation!"</p>
+                <div class="testimonial-author">
+                    <img src="https://i.pravatar.cc/50?img=5" alt="Avatar" class="author-avatar">
+                    <div>
+                        <strong>Maria Garcia</strong>
+                        <span>Founder, WebFlow</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TODO 5: Footer -->
+    <footer class="site-footer" id="contact">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>About Us</h4>
+                <p>TechLaunch is a modern web development platform built for developers who value speed, security, and simplicity. Founded in 2024.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Discord</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TechLaunch. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

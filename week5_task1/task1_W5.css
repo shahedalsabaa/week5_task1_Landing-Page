@@ -1,0 +1,112 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: #0f0f1a; color: #e0e0e0; line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* ===== TODO 1: Navbar (Flexbox) ===== */              
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(50, 4, 54, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.logo { font-size: 1.5rem; font-weight: 800; color: #af4c9d; }
+.nav-links { display: flex; gap: 30px; }
+.nav-links a { color: #888; font-weight: 600; font-size: 0.9rem; transition: color 0.3s; }
+.nav-links a:hover { color: #af4c9d; }
+
+/* ===== TODO 2: Hero Section (Flexbox centering) ===== */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+    padding-top: 70px;
+    background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+}
+.hero-content { max-width: 700px; }
+.hero-title { font-size: 3rem; font-weight: 800; color: #fff; margin-bottom: 20px; line-height: 1.2; }
+.hero-subtitle { font-size: 1.2rem; color: #888; margin-bottom: 30px; line-height: 1.6; }
+.hero-buttons { display: flex; gap: 15px; justify-content: center; }
+.btn { padding: 12px 30px; border-radius: 8px; font-weight: 600; font-size: 1rem; transition: all 0.3s; }
+.btn-primary { background: #d05bba; color: #fff; }
+.btn-primary:hover { background: #af4c9d; }
+.btn-secondary { background: transparent; border: 2px solid #af4c9d; color: #af4c90; }
+.btn-secondary:hover { background: rgba(76,175,80,0.1); }
+
+/* ===== TODO 3: Features Section (CSS Grid) ===== */
+.features { padding: 80px 40px; text-align: center; max-width: 1100px; margin: 0 auto; }
+.section-heading { font-size: 2rem; color: #fff; margin-bottom: 10px; }
+.section-subheading { color: #888; margin-bottom: 50px; font-size: 1.1rem; }
+.features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+.feature-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+}
+.feature-card:hover { transform: translateY(-5px); border-color: rgba(76,175,80,0.3); }
+.feature-icon { font-size: 2.5rem; margin-bottom: 15px; }
+.feature-card h3 { color: #fff; margin-bottom: 10px; font-size: 1.2rem; }
+.feature-card p { color: #888; font-size: 0.95rem; line-height: 1.6; }
+
+/* ===== TODO 4: Testimonials (Flexbox) ===== */
+.testimonials { padding: 80px 40px; text-align: center; background: rgba(255,255,255,0.02); }
+.testimonials-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.testimonial-card {
+    flex: 0 0 300px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: left;
+}
+.testimonial-text { color: #b0b0c0; font-style: italic; margin-bottom: 20px; line-height: 1.6; }
+.testimonial-author { display: flex; align-items: center; gap: 12px; }
+.author-avatar { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; }
+.testimonial-author strong { display: block; color: #fff; font-size: 0.9rem; }
+.testimonial-author span { color: #af4c9d; font-size: 0.8rem; }
+
+/* ===== TODO 5: Footer (CSS Grid) ===== */
+.site-footer { padding: 60px 40px 20px; background: #1a1a2e; border-top: 1px solid rgba(255,255,255,0.05); }
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.footer-col h4 { color: #af4c9d; margin-bottom: 15px; font-size: 1.1rem; }
+.footer-col ul li { margin-bottom: 8px; }
+.footer-col ul li a { color: #888; transition: color 0.3s; }
+.footer-col ul li a:hover { color: #af4c9d; }
+.footer-col p { color: #888; line-height: 1.6; font-size: 0.9rem; }
+.footer-bottom { text-align: center; padding-top: 20px; color: #555; font-size: 0.85rem; }
+
+/* Bonus: responsive (stack columns on small screens) */
+@media (max-width: 768px) {
+    .navbar { padding: 15px 20px; }
+    .nav-links { gap: 15px; }
+    .hero-title { font-size: 2.2rem; }
+    .features-grid, .footer-grid { grid-template-columns: 1fr; }
+} 
